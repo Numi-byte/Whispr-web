@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whispr - Quantum Secure Messaging</title>
+  <meta
+          name="description"
+          content="Experience quantum-level secure messaging with self-destructing, end-to-end encrypted communications. Join the future of privacy."
+  />
+
+  <!-- Include the Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Inline configuration for your custom Tailwind theme -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cosmic: "#0F0A1E",
+            nebula: "#2A1454",
+            plasma: "#7C3AED",
+            quantum: "#4F46E5",
+            singularity: "#1E1B4B"
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          },
+          backdropBlur: {
+            '4xl': '72px'
+          }
+        }
+      },
+      content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"]
+    };
+  </script>
+
+  <!-- If needed, load a Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+  />
+</head>
+<body class="bg-cosmic text-white">
+<div id="root"></div>
+<!-- Your script entry point: adjust if necessary -->
+<script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
