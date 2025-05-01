@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "./supabaseClient"; // Ensure supabaseClient.ts is correctly configured
 import { LockClosedIcon, BoltIcon, DevicePhoneMobileIcon } from "@heroicons/react/24/outline";
+import { Link } from 'react-router-dom';
 
 /* ========================
    Minimalistic Navbar
@@ -285,12 +286,15 @@ function Footer() {
             <div className="max-w-7xl mx-auto px-4 text-center text-gray-600 text-xs">
                 <p>© {new Date().getFullYear()} Whispr Inc. All rights reserved.</p>
                 <div className="mt-2 space-x-2">
-                    <a href="#" className="hover:text-gray-900 transition">
+                    <Link to="/privacy" className="hover:text-gray-900 transition">
                         Privacy Policy
-                    </a>
-                    <a href="#" className="hover:text-gray-900 transition">
-                        Terms of Service
-                    </a>
+                    </Link>
+                             <Link to="#" className="hover:text-gray-900 transition">
+                               Terms of Service
+                             </Link>
+                             <Link to="/terms" className="hover:text-gray-900 transition">
+                               Terms of Service
+                             </Link>
                 </div>
             </div>
         </footer>
